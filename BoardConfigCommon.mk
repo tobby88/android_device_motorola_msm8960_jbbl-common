@@ -81,8 +81,9 @@ endif
 BOARD_USES_LEGACY_MMAP := true
 
 # TWRP
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # QCOM SELinux policy
 include device/qcom/sepolicy/sepolicy.mk
